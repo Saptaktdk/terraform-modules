@@ -26,5 +26,6 @@ resource "google_compute_instance" "default" {
       nat_ip = google_compute_address.static_external_ip.address
     }
   }
+  metadata_startup_script = var.metadata_startup_script
   depends_on = [ google_compute_address.static_external_ip ]
 }

@@ -54,5 +54,8 @@ variable "static_ip_name" {
     type = string
 }
 
+variable "metadata_startup_script" {
+    type = string
+}
 
 
