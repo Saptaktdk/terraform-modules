@@ -19,7 +19,8 @@ resource "google_compute_instance" "default" {
   }
 
   network_interface {
-    network = var.vpc_name
+    network = data.google_compute_network.vpc_network.self_link
+    subnetwork = data.google_compute_subnetwork.vpc_subnet.self_link
 
     access_config {
       // Ephemeral public IP
